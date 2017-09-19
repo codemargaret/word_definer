@@ -1,6 +1,17 @@
 <h1><%= @word.word %></h1>
-<h3><%= @word.definition %></h3>
-<h3><%= @word.def2 %></h3>
-<h3><%= @word.def3 %></h3>
+
+<ul class="list-unstyled">
+<% @word.show_defs.each do |definition| %>
+    <li><%= definition %></li>
+<% end %>
+</ul>
+
+<form action="/word/<%= @word.id %>" method="post">
+  <div class="form-group">
+    <label for="definition">Definition</label>
+    <input id="definition" name="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add definition</button>
+</form>
 
 <a href="/">Back to list</a>
