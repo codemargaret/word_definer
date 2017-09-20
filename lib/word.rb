@@ -1,11 +1,12 @@
 class Word
   @@word_list = []
-  @definitions = []
-  attr_accessor :word
+
+  attr_accessor :word, :definition
   attr_reader :id
 
   def initialize(attributes)
     @word = attributes.fetch('word')
+    @definitions = []
     @id = @@word_list.length + 1
   end
 
@@ -34,8 +35,8 @@ class Word
     @@word_list.push(self)
   end
 
-  def add_def(definition)
-    @definitions.push(definition)
+  def add_def
+    @definitions.push(self)
   end
 
 

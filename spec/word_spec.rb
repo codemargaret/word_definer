@@ -57,10 +57,10 @@ describe("Word") do
 
   describe('.add_def') do
     it('adds a definition to the definition list') do
-      word = Word.new({"word" => "continent"})
+      word = Word.new({"word" => "continent", "definition" => "one of the seven main landmasses on the Earth"})
       word.add_word()
-      word.add_def("one of the seven main landmasses on the Earth")
-      expect(@definitions).to(eq("one of the seven main landmasses on the Earth"))
+      word.add_def()
+      expect(Word.all()).to(eq(word))
     end
   end
 
