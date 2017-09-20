@@ -1,7 +1,7 @@
 class Word
   @@word_list = []
 
-  attr_accessor :word, :definition
+  attr_accessor :word, :definitions
   attr_reader :id
 
   def initialize(attributes)
@@ -35,9 +35,11 @@ class Word
     @@word_list.push(self)
   end
 
-  def add_def
-    @definitions.push(self)
+  def add_def(definition)
+    @definitions.push(definition)
   end
 
-
+  def show_defs
+    @definitions
+  end
 end #Word class

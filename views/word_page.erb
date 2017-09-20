@@ -1,12 +1,14 @@
 <h1><%= @word.word %></h1>
 
-<% @definitions.each do |definition| %>
-  <h4><%= definition %></a></h4>
-<% end %>
+<ul class="list-unstyled">
+  <% @word.show_defs.each do |definition| %>
+    <li><%= definition %></li>
+  <% end %>
+</ul>
 
 <h4>Add a definition:</h4>
 
-<form action="/word_page" method="post">
+<form action="/word/<% @word.id %>" method="post">
   <div class="form-group">
     <label for="definition">Definition</label>
     <input id="definition" name="definition" class="form-control" type="text">

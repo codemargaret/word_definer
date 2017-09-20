@@ -57,15 +57,9 @@ describe("Word") do
 
   describe('.add_def') do
     it('adds a definition to the definition list') do
-      word = Word.new({"word" => "continent", "definition" => "one of the seven main landmasses on the Earth"})
-      word.add_word()
-      word.add_def()
-      expect(Word.all()).to(eq(word))
+      word = Word.new({"word" => "continent"})
+      word.add_def("one of the seven main landmasses on the Earth")
+      expect(word.show_defs).to(eq(["one of the seven main landmasses on the Earth"]))
     end
   end
-
-  # word1 = Word.new({"word" => "country", "definition" => "a nation with its own government on a particular piece of land", "def2" => "", "def3" => ""})
-  # word2 = Word.new({"word" => "delta", "definition" => "a trangular soil deposit at the mouth of a river", "def2" => "", "def3" => ""})
-  # word3 = Word.new({"word" => "continent","definition" => "one of the seven main landmasses on the Earth", "def2" => "", "def3" => ""})
-
 end #Word class
