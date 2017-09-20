@@ -1,13 +1,11 @@
 class Word
   @@word_list = []
-  attr_accessor :word, :definition, :def2, :def3
+  @definitions = []
+  attr_accessor :word
   attr_reader :id
 
   def initialize(attributes)
     @word = attributes.fetch('word')
-    @definition = attributes.fetch('definition')
-    @def2 = attributes.fetch('def2')
-    @def3 = attributes.fetch('def3')
     @id = @@word_list.length + 1
   end
 
@@ -35,5 +33,6 @@ class Word
   def self.sort()
     @@word_list.sort_by { |word| word.word}
   end
+
 
 end #Word class
