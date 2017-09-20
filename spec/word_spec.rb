@@ -14,16 +14,6 @@ describe("Word") do
     end
   end
 
-  describe('#add_word') do
-    it("adds words to the word list") do
-      word1 = Word.new({"word" => "continent"})
-      word1.add_word()
-      word2 = Word.new({"word" => "country"})
-      word2.add_word()
-      expect(Word.all()).to(eq([word1, word2]))
-    end
-  end
-
   describe("#id") do
     it("increments an id by 1 each time a new item is added") do
       word1 = Word.new({"word" => "continent"})
@@ -32,6 +22,16 @@ describe("Word") do
       word2.add_word()
       expect(word1.id()).to(eq(1))
       expect(word2.id()).to(eq(2))
+    end
+  end
+
+  describe('#add_word') do
+    it("adds words to the word list") do
+      word1 = Word.new({"word" => "continent"})
+      word1.add_word()
+      word2 = Word.new({"word" => "country"})
+      word2.add_word()
+      expect(Word.all()).to(eq([word1, word2]))
     end
   end
 
@@ -52,6 +52,15 @@ describe("Word") do
       word3 = Word.new({"word" => "continent"})
       word3.add_word()
       expect(Word.sort()).to(eq([word3, word1, word2]))
+    end
+  end
+
+  describe('.add_def') do
+    it('adds a definition to the definition list') do
+      word = Word.new({"word" => "continent"})
+      word.add_word()
+      word.add_def("one of the seven main landmasses on the Earth")
+      expect(@definitions).to(eq("one of the seven main landmasses on the Earth"))
     end
   end
 

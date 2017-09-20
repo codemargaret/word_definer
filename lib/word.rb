@@ -13,10 +13,6 @@ class Word
     @@word_list
   end
 
-  def add_word
-    @@word_list.push(self)
-  end
-
   def self.clear()
     @@word_list = []
   end
@@ -32,6 +28,14 @@ class Word
 
   def self.sort()
     @@word_list.sort_by { |word| word.word}
+  end
+
+  def add_word
+    @@word_list.push(self)
+  end
+
+  def add_def(definition)
+    @definitions.push(definition)
   end
 
 
