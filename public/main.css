@@ -1,6 +1,22 @@
 body {
-  background-color: lightblue;
-  color: darkblue;
+  background-color: darkseagreen;
+  color: darkgreen;
   text-align: center;
   margin: 30px;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+  position: relative;
+}
+
+img {
+  width: auto;
+  height: 300px;
+  margin: 50px;
+}
+
+#list {
+  margin: 50px;
 }

@@ -1,4 +1,4 @@
-# _Word Definer_
+# _Word Dragon_
 
 #### _A website to help children learn new words, 9.15.2017_
 
@@ -12,15 +12,21 @@ _This application allows children to create their own dictionary with words and 
 
 * _Behavior: Save a word to the word list._
 * _Input: Continent_
-* _Output: Word list: continent_
+* _Output: My New Words: continent_
 
 * _Behavior: Save and view multiple definitions for each word_
 * _Input: One of the seven main landmasses on the Earth, a large landmass on another planet_
-* _Output: Word page: Continent - One of the seven main landmasses on the Earth, a large landmass on another planet _
+* _Output: Word page: Continent - One of the seven main landmasses on the Earth, a large landmass on another planet_
+
+* _Behavior: Alphabetizes the word list automatically_
+* _Input: delta, country, continent_
+* _Output: My New Words: continent, country, delta_
 
 ## Setup/Installation Requirements
 
 * _Install the word definer by cloning this repository_
+* _Click the link below to access the application online:_
+* _[Word Dragon]()_
 
 ## Known Bugs
 
@@ -33,6 +39,8 @@ _If you have questions, comments, or concerns, please contact [Margaret](margare
 ## Technologies Used
 
 * _Ruby_
+* _Sinatra_
+* _Heroku_
 * _CSS_
 * _Bootstrap_
 

@@ -1,15 +1,20 @@
-<h2>My New Words!</h2>
-
-<% @word_list.each do |word| %>
-  <h4><a href="/word/<%= word.id %>"><%= word.word %></a></h4>
-<% end %>
-
-<h4>Add a word to the list:</h4>
+<h2>Word Dragon</h2>
 
 <form action="/" method="post">
   <div class="form-group">
-    <label for="word">Word</label>
+    <label for="word">Add a word to your list!</label>
     <input id="word" name="word" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn">Add word!</button>
+  <button type="submit" class="btn btn-success">Add word!</button>
 </form>
+
+<div id="list">
+  <h4>My New Words:</h4>
+  <p>Click a word to add definitions!</p>
+
+  <% @word_list.each do |word| %>
+    <h4><a href="/word/<%= word.id %>"><%= word.word %></a></h4>
+  <% end %>
+
+  <img src="/dragon.png" alt="A very cute dragon">
+</div>

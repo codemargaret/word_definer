@@ -38,4 +38,18 @@ describe("Word") do
       expect(page).to have_content('landmasses')
     end
   end
+
+  describe('a word page', {:type => :feature}) do
+    it('shows multiple definitions') do
+      visit('/')
+      fill_in('word', :with => 'continent')
+      click_button('Add word!')
+      click_link('continent')
+      fill_in('definition', :with => 'one of the seven main landmasses on Earth')
+      click_button('Add definition')
+      fill_in('definition', :with => 'a large landmass on another planet')
+      click_button('Add definition')
+      expect(page).to have_content('planet')
+    end
+  end
 end #Word class
