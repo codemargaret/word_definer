@@ -26,7 +26,7 @@ _This application allows children to create their own dictionary with words and 
 
 * _Install the word definer by cloning this repository_
 * _Click the link below to access the application online:_
-* _[Word Dragon]()_
+* _[Word Dragon](https://sleepy-oasis-37454.herokuapp.com/)_
 
 ## Known Bugs
 
