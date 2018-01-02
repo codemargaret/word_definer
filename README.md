@@ -19,7 +19,7 @@ _This application allows children to create their own dictionary with words and 
 | Saves and shows multiple definitions for each word | One of the seven main landmasses on the Earth, a large landmass on another planet | Word page: Continent - One of the seven main landmasses on the Earth, a large landmass on another planet |
 
 ## Setup/Installation Requirements
-* _Install the word definer by cloning this repository_
+* _Install the word definer by cloning this repository. Make sure to run bundle update to get the latest gem versions._
 * _Click the link below to access the application online:_
 * _[Word Dragon](https://sleepy-oasis-37454.herokuapp.com/)_
 
